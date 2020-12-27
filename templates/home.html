@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Job Search</title>
+        <link
+                rel="stylesheet"
+                href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+                integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+                crossorigin="anonymous"
+        >
+    </head>
+    <body>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col col-md-8 text-center p-5">
+                    <div class="card">
+                        <div class="card-body p-5">
+                            <h1 class="mb-5 text-uppercase">Job Search</h1>
+                            <form action="/search" method="get">
+                                <label for="input" class="form-label">Search for remote jobs:</label>
+                                <div class="input-group">
+                                    <input type="text" id="input" name="input" class="form-control" placeholder="i.e python" required />
+                                    <button class="btn btn-primary" type="submit">Search</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

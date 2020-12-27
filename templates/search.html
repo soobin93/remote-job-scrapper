@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Job Search</title>
+        <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+            crossorigin="anonymous"
+        >
+    </head>
+    <body>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col col-md-10 p-5">
+                    <div class="card">
+                        <div class="card-body p-5">
+                            <h4 class="font-weight-bold text-uppercase text-center">
+                                <a href="/">Remote Jobs</a>
+                            </h4>
+
+                            <div class="text-center">Found {{job_count}} jobs for: {{input}}</div>
+
+                            <div class="text-center font-weight-bold mb-4">
+                                <a href="/export?input={{input}}">Export to CSV</a>
+                            </div>
+
+                            {% for job in jobs %}
+                            <div class="card mb-4">
+                                <div class="card-body">
+                                    <div>Source: {{job.source}}</div>
+                                    <div class="font-weight-bold">{{job.title}}</div>
+                                    <div class="font-weight-bold text-muted">{{job.company}}</div>
+                                    <a href="{{job.link}}" target="_blank">Apply</a>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
